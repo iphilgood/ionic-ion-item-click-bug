@@ -6,7 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  title = 'Awesome title';
 
   constructor() {}
 
+  onTitleClicked() {
+    console.log('onTitleClicked');
+  }
+
+  resetTitle() {
+    this.title = '';
+  }
 }
