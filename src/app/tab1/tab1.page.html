@@ -29,5 +29,12 @@
         <ion-icon name="close"></ion-icon>
       </ion-button>
     </ion-item>
+
+    <ion-item (click)="onTitleClicked()" button detail="false">
+      <ion-label>
+        Title
+      </ion-label>
+      <ion-input [value]="title"></ion-input>
+    </ion-item>
   </ion-list>
 </ion-content>
