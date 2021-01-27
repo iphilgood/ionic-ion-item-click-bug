@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Tab 1 </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,11 +12,13 @@
   </ion-header>
 
   <ion-list>
+    <ion-item-divider>
+      <ion-label> Floating label </ion-label>
+    </ion-item-divider>
+
     <ion-item (click)="onTitleClicked()" button detail="false">
-      <ion-label position="floating">
-        Title
-      </ion-label>
-      <ion-input [value]="title" readonly></ion-input>
+      <ion-label position="floating"> Title </ion-label>
+      <ion-input [value]="title"></ion-input>
       <ion-button
         *ngIf="title"
         slot="end"
@@ -30,11 +30,31 @@
       </ion-button>
     </ion-item>
 
-    <ion-item (click)="onTitleClicked()" button detail="false">
-      <ion-label>
-        Title
-      </ion-label>
-      <ion-input [value]="title"></ion-input>
+    <ion-item-divider>
+      <ion-label> Floating label and readonly input </ion-label>
+    </ion-item-divider>
+
+    <ion-item (click)="onSubTitleClicked()" button detail="false">
+      <ion-label position="floating"> Sub Title </ion-label>
+      <ion-input [value]="subTitle" readonly></ion-input>
+      <ion-button
+        *ngIf="subTitle"
+        slot="end"
+        fill="clear"
+        size="small"
+        (click)="resetSubTitle($event)"
+      >
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item-divider>
+      <ion-label> Simple input with label </ion-label>
+    </ion-item-divider>
+
+    <ion-item (click)="onSubSubTitleClicked()" button detail="false">
+      <ion-label> Sub Sub Title </ion-label>
+      <ion-input [value]="subSubTitle"></ion-input>
     </ion-item>
   </ion-list>
 </ion-content>
